@@ -1,24 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Right_On_Target" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="Ybe-OX-1Yr">
+                                <rect key="frame" x="65" y="180" width="714" height="31"/>
+                                <imageReference key="minimumValueImage" image="00.square.fill" catalog="system" symbolScale="large" renderingMode="hierarchical" variableValue="0.0">
+                                    <hierarchicalColors>
+                                        <color red="0.2941176593" green="0.25098040700000002" blue="0.18823529780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color red="0.78361636400000001" green="0.69039336330000001" blue="0.7575340304" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </hierarchicalColors>
+                                </imageReference>
+                                <imageReference key="maximumValueImage" image="50.square.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                                    <hierarchicalColors>
+                                        <color red="0.2941176593" green="0.25098040700000002" blue="0.18823529780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color red="0.78361636400000001" green="0.69039336330000001" blue="0.7575340304" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color red="0.78361636400000001" green="0.69039336330000001" blue="0.7575340304" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </hierarchicalColors>
+                                </imageReference>
+                                <color key="minimumTrackTintColor" systemColor="opaqueSeparatorColor"/>
+                                <color key="maximumTrackTintColor" systemColor="opaqueSeparatorColor"/>
+                                <color key="thumbTintColor" red="0.78431367870000002" green="0.69019609689999994" blue="0.75686275960000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="tma-ga-rRX"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxZ-5B-kDy">
+                                <rect key="frame" x="348.33333333333331" y="240" width="147.33333333333331" height="38"/>
+                                <buttonConfiguration key="configuration" style="filled" image="moon.stars" catalog="system">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Проверить">
+                                            <attributes>
+                                                <font key="NSFont" size="20" name="GillSans-SemiBold"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.29223948777324027" green="0.24850938735026601" blue="0.18732073599037005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.78361636400222778" green="0.69039336325170353" blue="0.75753403038006251" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkNumber" destination="BYZ-38-t0r" eventType="touchUpInside" id="P0r-dy-Ipu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84i-fr-636">
+                                <rect key="frame" x="411" y="308" width="22" height="24"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content=" 0 ">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLG-Mn-gEZ">
+                                <rect key="frame" x="684.33333333333337" y="355" width="131.66666666666663" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="О программе">
+                                    <color key="baseForegroundColor" red="0.2941176593" green="0.25098040700000002" blue="0.18823529780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showNextScreen" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yfj-LM-clR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.33788065239101933" green="0.44842065923669705" blue="0.51142282196969702" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="84i-fr-636" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AWI-4d-8E7"/>
+                            <constraint firstAttribute="trailing" secondItem="eLG-Mn-gEZ" secondAttribute="trailing" constant="28" id="Ifz-D5-HxI"/>
+                            <constraint firstItem="xxZ-5B-kDy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Waa-mn-vmk"/>
+                            <constraint firstItem="Ybe-OX-1Yr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fAm-2q-H1h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ybe-OX-1Yr" secondAttribute="trailing" constant="20" id="g9T-1L-4jA"/>
+                            <constraint firstItem="84i-fr-636" firstAttribute="top" secondItem="xxZ-5B-kDy" secondAttribute="bottom" constant="30" id="h11-gk-A5y"/>
+                            <constraint firstItem="Ybe-OX-1Yr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jHf-zf-g8K"/>
+                            <constraint firstItem="eLG-Mn-gEZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="20" id="oDm-dH-Qtx"/>
+                            <constraint firstItem="xxZ-5B-kDy" firstAttribute="top" secondItem="Ybe-OX-1Yr" secondAttribute="bottom" constant="30" id="vAm-Fc-67u"/>
+                            <constraint firstItem="eLG-Mn-gEZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="x5x-7o-hTB"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="QZd-5D-S3f"/>
+                    <connections>
+                        <outlet property="colorView" destination="8bC-Xf-vdC" id="Nap-QT-mSB"/>
+                        <outlet property="label" destination="84i-fr-636" id="HD0-DO-xYj"/>
+                        <outlet property="slider" destination="Ybe-OX-1Yr" id="6fm-mm-bU1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="47.630331753554501" y="-3.0769230769230766"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="hiD-O5-jjp">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="zEH-FI-0nQ" customClass="SecondViewController" customModule="Right_On_Target" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J8W-wR-bah">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9r-kW-bHn">
+                                <rect key="frame" x="369.66666666666669" y="172.33333333333334" width="104.66666666666669" height="45.666666666666657"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Назад">
+                                            <attributes>
+                                                <font key="NSFont" size="26" name="Verdana"/>
+                                                <font key="NSOriginalFont" size="34" name="Webdings"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.36519586550901878" green="0.56273123048585871" blue="0.44450722624148181" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.90575680648437651" green="0.75079942004279987" blue="0.64020351596533398" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="hideCurrentScene" destination="zEH-FI-0nQ" eventType="touchUpInside" id="1jc-m4-9ea"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Afn-rw-pju"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x9r-kW-bHn" firstAttribute="centerY" secondItem="J8W-wR-bah" secondAttribute="centerY" id="fqd-tv-VQr"/>
+                            <constraint firstItem="x9r-kW-bHn" firstAttribute="centerX" secondItem="J8W-wR-bah" secondAttribute="centerX" id="hpv-2a-rww"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IbQ-xt-XKs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mqi-qb-6pR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25.592417061611375" y="-772.30769230769226"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="00.square.fill" catalog="system" width="128" height="114"/>
+        <image name="50.square.fill" catalog="system" width="128" height="114"/>
+        <image name="moon.stars" catalog="system" width="125" height="128"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
