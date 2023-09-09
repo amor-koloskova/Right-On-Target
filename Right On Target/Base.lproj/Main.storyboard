@@ -96,6 +96,9 @@
                                     <color key="baseForegroundColor" red="0.31009313857070708" green="0.19395337804330073" blue="0.10896736162276709" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="baseBackgroundColor" red="0.90588235859999999" green="0.8156862855" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="openNumberGame" destination="2Lm-9V-nwT" eventType="touchUpInside" id="Ueq-tL-NrX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kjo-Jr-Bve"/>
@@ -183,7 +186,7 @@
                                 </attributedString>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLG-Mn-gEZ">
-                                <rect key="frame" x="742.66666666666663" y="354" width="73.333333333333371" height="35"/>
+                                <rect key="frame" x="724" y="346" width="73.333333333333371" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Назад">
                                     <color key="baseForegroundColor" red="0.2941176593" green="0.25098040700000002" blue="0.18823529780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -196,16 +199,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.33788065239101933" green="0.44842065923669705" blue="0.51142282196969702" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="eLG-Mn-gEZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Um-HY-Ho3"/>
                             <constraint firstItem="84i-fr-636" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AWI-4d-8E7"/>
-                            <constraint firstAttribute="trailing" secondItem="eLG-Mn-gEZ" secondAttribute="trailing" constant="28" id="Ifz-D5-HxI"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="eLG-Mn-gEZ" secondAttribute="bottom" constant="-12" id="CQa-35-iJh"/>
+                            <constraint firstAttribute="trailing" secondItem="eLG-Mn-gEZ" secondAttribute="trailing" constant="46.666666666666629" id="NwH-ht-7Ol"/>
                             <constraint firstItem="xxZ-5B-kDy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Waa-mn-vmk"/>
                             <constraint firstItem="Ybe-OX-1Yr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fAm-2q-H1h"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ybe-OX-1Yr" secondAttribute="trailing" constant="20" id="g9T-1L-4jA"/>
                             <constraint firstItem="84i-fr-636" firstAttribute="top" secondItem="xxZ-5B-kDy" secondAttribute="bottom" constant="30" id="h11-gk-A5y"/>
                             <constraint firstItem="Ybe-OX-1Yr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jHf-zf-g8K"/>
-                            <constraint firstItem="eLG-Mn-gEZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="20" id="oDm-dH-Qtx"/>
                             <constraint firstItem="xxZ-5B-kDy" firstAttribute="top" secondItem="Ybe-OX-1Yr" secondAttribute="bottom" constant="30" id="vAm-Fc-67u"/>
-                            <constraint firstItem="eLG-Mn-gEZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="x5x-7o-hTB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QZd-5D-S3f"/>
@@ -239,29 +242,8 @@
                                 </attributedString>
                                 <color key="highlightedColor" red="0.30980393290000002" green="0.19607841970000001" blue="0.109803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqQ-M6-ywI">
-                                <rect key="frame" x="314" y="166" width="106" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Вариант 2">
-                                    <color key="baseForegroundColor" red="0.30980393290000002" green="0.19607841970000001" blue="0.109803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZk-I3-u3D">
-                                <rect key="frame" x="428" y="166" width="106" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Вариант 3">
-                                    <color key="baseForegroundColor" red="0.30980393290000002" green="0.19607841970000001" blue="0.109803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfJ-GI-Cjw">
-                                <rect key="frame" x="542" y="166" width="106" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Вариант 4">
-                                    <color key="baseForegroundColor" red="0.30980393290000002" green="0.19607841970000001" blue="0.109803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4e-1h-9cq">
-                                <rect key="frame" x="203" y="166" width="103" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4e-1h-9cq">
+                                <rect key="frame" x="188" y="158" width="103" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray">
                                     <attributedString key="attributedTitle">
@@ -270,28 +252,67 @@
                                     <color key="baseForegroundColor" red="0.29455377510000003" green="0.18576087359999999" blue="0.1059614829" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqQ-M6-ywI">
+                                <rect key="frame" x="299" y="158" width="106" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Вариант 2">
+                                    <color key="baseForegroundColor" red="0.30980393290000002" green="0.19607841970000001" blue="0.109803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZk-I3-u3D">
+                                <rect key="frame" x="433" y="158" width="105.66666666666663" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Вариант 3">
+                                    <color key="baseForegroundColor" red="0.30980393290000002" green="0.19607841970000001" blue="0.109803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfJ-GI-Cjw">
+                                <rect key="frame" x="546" y="158" width="106" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Вариант 4">
+                                    <color key="baseForegroundColor" red="0.30980393290000002" green="0.19607841970000001" blue="0.109803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCe-PS-uKM">
+                                <rect key="frame" x="717" y="340" width="81" height="40"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Назад">
+                                    <color key="baseForegroundColor" red="0.2941176593" green="0.25490197539999998" blue="0.19215688110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="hideCurrentScene" destination="zEH-FI-0nQ" eventType="touchUpInside" id="gtk-dr-Mv9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Afn-rw-pju"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="CfJ-GI-Cjw" firstAttribute="leading" secondItem="rZk-I3-u3D" secondAttribute="trailing" constant="8" symbolic="YES" id="60v-wr-wR4"/>
-                            <constraint firstItem="CfJ-GI-Cjw" firstAttribute="baseline" secondItem="rZk-I3-u3D" secondAttribute="baseline" id="8MN-PI-EIw"/>
-                            <constraint firstItem="CfJ-GI-Cjw" firstAttribute="top" secondItem="Afn-rw-pju" secondAttribute="top" constant="166" id="99W-XV-yx6"/>
-                            <constraint firstItem="Afn-rw-pju" firstAttribute="bottom" secondItem="RJ7-vO-npa" secondAttribute="bottom" constant="279" id="Oyl-Rc-k0Q"/>
-                            <constraint firstItem="Afn-rw-pju" firstAttribute="trailing" secondItem="CfJ-GI-Cjw" secondAttribute="trailing" constant="149" id="TWK-Y6-E0f"/>
-                            <constraint firstItem="l4e-1h-9cq" firstAttribute="leading" secondItem="Afn-rw-pju" secondAttribute="leading" constant="156" id="cOF-rh-wIv"/>
-                            <constraint firstItem="RJ7-vO-npa" firstAttribute="centerX" secondItem="J8W-wR-bah" secondAttribute="centerX" id="iqb-Kt-sHc"/>
-                            <constraint firstItem="kqQ-M6-ywI" firstAttribute="leading" secondItem="l4e-1h-9cq" secondAttribute="trailing" constant="8" symbolic="YES" id="oin-q8-U4r"/>
-                            <constraint firstItem="CfJ-GI-Cjw" firstAttribute="baseline" secondItem="kqQ-M6-ywI" secondAttribute="baseline" id="sfe-IB-F5y"/>
-                            <constraint firstItem="RJ7-vO-npa" firstAttribute="top" secondItem="Afn-rw-pju" secondAttribute="top" constant="52" id="t7s-dS-oGP"/>
-                            <constraint firstItem="CfJ-GI-Cjw" firstAttribute="baseline" secondItem="l4e-1h-9cq" secondAttribute="baseline" id="vVO-CI-uaY"/>
+                            <constraint firstAttribute="trailing" secondItem="dCe-PS-uKM" secondAttribute="trailing" constant="46" id="0OP-np-MKQ"/>
+                            <constraint firstItem="l4e-1h-9cq" firstAttribute="leading" secondItem="Afn-rw-pju" secondAttribute="leading" constant="141" id="A3L-dB-qcJ"/>
+                            <constraint firstItem="Afn-rw-pju" firstAttribute="bottom" secondItem="CfJ-GI-Cjw" secondAttribute="bottom" constant="176" id="DSm-wS-gy1"/>
+                            <constraint firstItem="dCe-PS-uKM" firstAttribute="leading" secondItem="Afn-rw-pju" secondAttribute="leading" constant="670" id="Mr7-48-pOa"/>
+                            <constraint firstItem="RJ7-vO-npa" firstAttribute="centerX" secondItem="J8W-wR-bah" secondAttribute="centerX" id="PCc-Uo-AnD"/>
+                            <constraint firstItem="CfJ-GI-Cjw" firstAttribute="top" secondItem="Afn-rw-pju" secondAttribute="top" constant="158" id="RLA-6I-wA0"/>
+                            <constraint firstItem="Afn-rw-pju" firstAttribute="bottom" secondItem="l4e-1h-9cq" secondAttribute="bottom" constant="176" id="Rbi-sq-L7B"/>
+                            <constraint firstItem="kqQ-M6-ywI" firstAttribute="top" secondItem="RJ7-vO-npa" secondAttribute="bottom" constant="68" id="T7r-6c-l1w"/>
+                            <constraint firstItem="Afn-rw-pju" firstAttribute="trailing" secondItem="CfJ-GI-Cjw" secondAttribute="trailing" constant="145" id="VkD-HU-P6d"/>
+                            <constraint firstItem="RJ7-vO-npa" firstAttribute="top" secondItem="Afn-rw-pju" secondAttribute="top" constant="52" id="cEA-BN-hxm"/>
+                            <constraint firstItem="kqQ-M6-ywI" firstAttribute="leading" secondItem="l4e-1h-9cq" secondAttribute="trailing" constant="8" id="cO6-iG-LrL"/>
+                            <constraint firstItem="Afn-rw-pju" firstAttribute="bottom" secondItem="kqQ-M6-ywI" secondAttribute="bottom" constant="176" id="jsV-86-hLX"/>
+                            <constraint firstItem="rZk-I3-u3D" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kqQ-M6-ywI" secondAttribute="trailing" constant="8" symbolic="YES" id="ofd-LD-aMA"/>
+                            <constraint firstAttribute="bottom" secondItem="dCe-PS-uKM" secondAttribute="bottom" constant="10" id="qvK-hG-evl"/>
+                            <constraint firstItem="CfJ-GI-Cjw" firstAttribute="leading" secondItem="rZk-I3-u3D" secondAttribute="trailing" constant="7.3333333333333712" id="siF-Fd-MMd"/>
+                            <constraint firstItem="Afn-rw-pju" firstAttribute="bottom" secondItem="rZk-I3-u3D" secondAttribute="bottom" constant="176" id="ujC-mt-e2S"/>
+                            <constraint firstItem="l4e-1h-9cq" firstAttribute="top" secondItem="Afn-rw-pju" secondAttribute="top" constant="158" id="x3y-o1-4Tb"/>
+                            <constraint firstItem="rZk-I3-u3D" firstAttribute="top" secondItem="RJ7-vO-npa" secondAttribute="bottom" constant="68" id="yh8-EC-v2L"/>
+                            <constraint firstItem="dCe-PS-uKM" firstAttribute="top" secondItem="Afn-rw-pju" secondAttribute="top" constant="340" id="ywx-2a-GkC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IbQ-xt-XKs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mqi-qb-6pR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-26" y="-94"/>
+            <point key="canvasLocation" x="-26.303317535545023" y="-95.384615384615387"/>
         </scene>
     </scenes>
     <resources>
