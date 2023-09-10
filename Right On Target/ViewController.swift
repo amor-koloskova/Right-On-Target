@@ -29,8 +29,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let generator = NumberGenerator(startValue: 1, endValue: 50)!
-        game = Game(valueGenerator: generator, rounds: 5)
+        let generator = NumberGenerator(startValue: 1, endValue: 50)
+        game = Game(valueGenerator: generator!, rounds: 5)
         
         updateLabelWithSecretNumber(newText: String(game.currentRound.currentSecretValue))
         
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     }
     // MARK: - Обновление View
     // Обновление текста загаданного числа
-    private func updateLabelWithSecretNumber(newText: String ) {
+     private func updateLabelWithSecretNumber(newText: String ) {
         label.text = newText }
         // Отображение всплывающего окна со счетом
         private func showAlertWith(score: Int) {

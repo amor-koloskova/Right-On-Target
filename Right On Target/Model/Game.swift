@@ -32,7 +32,7 @@ protocol GameRoundProtocol {
 }
 
 protocol GeneratorProtocol {
-    func getRandomValue() -> Int
+    func getRandomValue() -> Int?
 }
 
 class Game: GameProtocol {
@@ -68,13 +68,14 @@ class Game: GameProtocol {
 
     func startNewRound() {
         let newSecretValue = self.getNewSecretValue()
-        currentRound = GameRound(secretValue: newSecretValue)
+        currentRound = GameRound(secretValue: Int(newSecretValue))
         rounds.append( currentRound )
     }
 
     // Загадать и вернуть новое случайное значение
     private func getNewSecretValue() -> Int {
-        return secretValueGenerator.getRandomValue()
+        let newSecretValue: Int = secretValueGenerator.getRandomValue()!
+        return newSecretValue
     }
 }
 
@@ -106,7 +107,14 @@ class NumberGenerator: GeneratorProtocol {
         startRangeValue = startValue
         endRangeValue = endValue
     }
-    func getRandomValue() -> Int {
-        (startRangeValue...endRangeValue).randomElement()!
+    func getRandomValue<T>() -> T? {
+        if let _ = T.self as? any Numeric.Type {
+            return (startRangeValue...endRangeValue).randomElement()! as? T
+        } else if let _ = T.self as? String.Type {
+            let a = ["1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"]
+            return "#".appending(a[Int.random(in:0..<15)]).appending(a[Int.random(in:0..<15)]).appending(a[Int.random(in:0..<15)].appending(a[Int.random(in:0..<15)]).appending(a[Int.random(in:0..<15)]).appending(a[Int.random(in:0..<15)])) as! T?
+        } else {
+            return nil
+        }
     }
 }

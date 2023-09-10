@@ -309,6 +309,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IbQ-xt-XKs"/>
+                    <connections>
+                        <outlet property="colorLabel" destination="RJ7-vO-npa" id="nA7-vg-aRI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mqi-qb-6pR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
