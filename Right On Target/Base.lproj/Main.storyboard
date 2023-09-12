@@ -311,6 +311,10 @@
                     <navigationItem key="navigationItem" id="IbQ-xt-XKs"/>
                     <connections>
                         <outlet property="colorLabel" destination="RJ7-vO-npa" id="nA7-vg-aRI"/>
+                        <outlet property="firstButton" destination="l4e-1h-9cq" id="slM-Hd-tDe"/>
+                        <outlet property="fourthButton" destination="CfJ-GI-Cjw" id="1Vx-nt-HEo"/>
+                        <outlet property="secondButton" destination="kqQ-M6-ywI" id="JSw-k7-MdP"/>
+                        <outlet property="thirdButton" destination="rZk-I3-u3D" id="fP3-bK-aRe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mqi-qb-6pR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

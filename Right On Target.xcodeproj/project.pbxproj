@@ -16,7 +16,9 @@
 		3195A4222A9DF9B1003A432D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3195A4202A9DF9B1003A432D /* Main.storyboard */; };
 		3195A4242A9DF9B2003A432D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3195A4232A9DF9B2003A432D /* Assets.xcassets */; };
 		3195A4272A9DF9B2003A432D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3195A4252A9DF9B2003A432D /* LaunchScreen.storyboard */; };
-		319699722AA8BC17009996FD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319699712AA8BC17009996FD /* Game.swift */; };
+		319699722AA8BC17009996FD /* NumberGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319699712AA8BC17009996FD /* NumberGame.swift */; };
+		31B6A2D62AB0871300C5AC7A /* ColorGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B6A2D52AB0871300C5AC7A /* ColorGame.swift */; };
+		31B6A2D82AB0982500C5AC7A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B6A2D72AB0982500C5AC7A /* Protocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +33,9 @@
 		3195A4232A9DF9B2003A432D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3195A4262A9DF9B2003A432D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3195A4282A9DF9B2003A432D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		319699712AA8BC17009996FD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		319699712AA8BC17009996FD /* NumberGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberGame.swift; sourceTree = "<group>"; };
+		31B6A2D52AB0871300C5AC7A /* ColorGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGame.swift; sourceTree = "<group>"; };
+		31B6A2D72AB0982500C5AC7A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +86,9 @@
 		319699702AA8BBB9009996FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				319699712AA8BC17009996FD /* Game.swift */,
+				31B6A2D72AB0982500C5AC7A /* Protocols.swift */,
+				319699712AA8BC17009996FD /* NumberGame.swift */,
+				31B6A2D52AB0871300C5AC7A /* ColorGame.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,8 +166,10 @@
 			files = (
 				311BFC612AA0B9BA0007D279 /* SecondViewController.swift in Sources */,
 				3137E9B72AAE21D4004166C1 /* UIColorExtension.swift in Sources */,
-				319699722AA8BC17009996FD /* Game.swift in Sources */,
+				319699722AA8BC17009996FD /* NumberGame.swift in Sources */,
+				31B6A2D82AB0982500C5AC7A /* Protocols.swift in Sources */,
 				3195A41F2A9DF9B1003A432D /* ViewController.swift in Sources */,
+				31B6A2D62AB0871300C5AC7A /* ColorGame.swift in Sources */,
 				3137E9B52AACB36E004166C1 /* VeryFirstViewController.swift in Sources */,
 				3195A41B2A9DF9B1003A432D /* AppDelegate.swift in Sources */,
 				3195A41D2A9DF9B1003A432D /* SceneDelegate.swift in Sources */,

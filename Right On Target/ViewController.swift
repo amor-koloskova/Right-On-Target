@@ -3,7 +3,7 @@ import UIKit
 class ViewController: UIViewController {
     
     // Сущность "игра"
-    var game: Game!
+    var game: NumberGame!
     
     // Элементы на сцене
     @IBOutlet weak var colorView: UIView!
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let generator = NumberGenerator(startValue: 1, endValue: 50)
-        game = Game(valueGenerator: generator!, rounds: 5)
+        game = NumberGame(valueGenerator: generator!, rounds: 5)
         
         updateLabelWithSecretNumber(newText: String(game.currentRound.currentSecretValue))
         
@@ -60,8 +60,10 @@ class ViewController: UIViewController {
     }
     // MARK: - Обновление View
     // Обновление текста загаданного числа
-     private func updateLabelWithSecretNumber(newText: String ) {
-        label.text = newText }
+     private func updateLabelWithSecretNumber(newText: String) {
+        label.text = newText
+         
+     }
         // Отображение всплывающего окна со счетом
         private func showAlertWith(score: Int) {
         let alert = UIAlertController(
