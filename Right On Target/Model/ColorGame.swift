@@ -6,7 +6,8 @@
 //
 
 import UIKit
-class ColorGame: GameProtocol {
+
+final class ColorGame: GameProtocol {
     
     typealias Round = ColorGameRound
     typealias Generator = ColorGenerator
@@ -57,27 +58,26 @@ class ColorGame: GameProtocol {
     
 }
 
-class ColorGameRound: GameRoundProtocol {
-    
+final class ColorGameRound: GameRoundProtocol {
     typealias ValueType = String
+    typealias ColorType = UIColor
     var score: Int = 0
     var currentSecretValue: ValueType
     init(secretValue: ValueType) {
         currentSecretValue = secretValue
     }
     
-    func calculateScore(with value: ValueType) {
-        var newValue = UIColor(hex: currentSecretValue)
-        var newValueAsString = "\(newValue)"
-        if value == newValueAsString {
+    func calculateScore(with value: ColorType) {
+        let newValue = UIColor(hex: currentSecretValue)
+        if value == newValue {
             score = 5
         } else {
-            score = 1
+            score = 0
         }
     }
 }
 
-class ColorGenerator: GeneratorProtocol {
+final class ColorGenerator: GeneratorProtocol {
     typealias ValueType = String
     
     func getRandomValue() -> ValueType {

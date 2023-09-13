@@ -22,7 +22,7 @@ class ViewController: CommonViewController {
         let newLabel = UILabel(frame: CGRect(x: 350, y: 40, width: 200, height: 20))
         newLabel.text = "Угадай где число :)"
         newLabel.font = UIFont(name: "Copperplate", size: 20)
-        newLabel.textColor = UIColor(red: 0.632, green: 0.566, blue: 0.586, alpha: 1)
+        newLabel.textColor = UIColor(red: 0.632, green: 0.566, blue: 0.586, alpha: 0.7)
         self.view.addSubview(newLabel)
     }
     

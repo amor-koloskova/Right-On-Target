@@ -26,12 +26,13 @@ protocol GameProtocol {
 
 protocol GameRoundProtocol {
     associatedtype ValueType
+    associatedtype ColorType
     // количество заработанных за раунд очков
     var score: Int { get }
     // загаданное значение
     var currentSecretValue: ValueType { get }
     // подсчет заработанных за раунд очков
-    func calculateScore(with value: ValueType)
+    func calculateScore(with value: ColorType)
 }
 
 protocol GeneratorProtocol {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NumberGame: GameProtocol {
+final class NumberGame: GameProtocol {
     typealias Round = NumberGameRound
     typealias Generator = NumberGenerator
     
@@ -59,7 +59,7 @@ class NumberGame: GameProtocol {
 }
 
 
-class NumberGameRound: GameRoundProtocol {
+final class NumberGameRound: GameRoundProtocol {
     typealias ValueType = Int
     var score: Int = 0
     var currentSecretValue: ValueType = 0
@@ -78,7 +78,7 @@ class NumberGameRound: GameRoundProtocol {
     }
 }
 
-class NumberGenerator: GeneratorProtocol {
+final class NumberGenerator: GeneratorProtocol {
     typealias ValueType = Int
     
     private let startRangeValue: Int

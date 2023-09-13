@@ -14,7 +14,7 @@ class SecondViewController: CommonViewController {
         super.viewDidLoad()
         
         let generator = ColorGenerator()
-        game = ColorGame(valueGenerator: generator, rounds: 2)
+        game = ColorGame(valueGenerator: generator, rounds: 5)
         updateLabelWithNewText(labelText: &(colorLabel.text)!, newText: String (game.currentRound.currentSecretValue))
         changeButtonsColor(text: colorLabel.text!)
     }
@@ -44,8 +44,8 @@ class SecondViewController: CommonViewController {
     
     
     @IBAction func checkColor(_ sender: UIButton) {
-        var bottonColor: UIColor = sender.backgroundColor!
-        game.currentRound.calculateScore(with: "\(bottonColor)")
+        let buttonColor: UIColor = sender.backgroundColor!
+        game.currentRound.calculateScore(with: buttonColor)
         if game.isGameEnded {
             showAlertWith(score: game.score)
             game.restartGame()
