@@ -10,7 +10,6 @@ import UIKit
 extension UIColor {
     convenience init?(hex: String) {
         let  hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: "#", with: "")
-        
         let length = hexSanitized.count
         var rgb: UInt64 = 0
         

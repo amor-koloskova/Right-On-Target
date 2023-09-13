@@ -19,6 +19,7 @@
 		319699722AA8BC17009996FD /* NumberGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319699712AA8BC17009996FD /* NumberGame.swift */; };
 		31B6A2D62AB0871300C5AC7A /* ColorGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B6A2D52AB0871300C5AC7A /* ColorGame.swift */; };
 		31B6A2D82AB0982500C5AC7A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B6A2D72AB0982500C5AC7A /* Protocols.swift */; };
+		31E626662AB1A98000CC0434 /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E626652AB1A98000CC0434 /* CommonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		319699712AA8BC17009996FD /* NumberGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberGame.swift; sourceTree = "<group>"; };
 		31B6A2D52AB0871300C5AC7A /* ColorGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGame.swift; sourceTree = "<group>"; };
 		31B6A2D72AB0982500C5AC7A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		31E626652AB1A98000CC0434 /* CommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,13 +70,11 @@
 		3195A4192A9DF9B1003A432D /* Right On Target */ = {
 			isa = PBXGroup;
 			children = (
+				3137E9B62AAE21D4004166C1 /* UIColorExtension.swift */,
+				31E626672AB1B64200CC0434 /* Controller */,
 				319699702AA8BBB9009996FD /* Model */,
 				3195A41A2A9DF9B1003A432D /* AppDelegate.swift */,
 				3195A41C2A9DF9B1003A432D /* SceneDelegate.swift */,
-				3137E9B42AACB36E004166C1 /* VeryFirstViewController.swift */,
-				3195A41E2A9DF9B1003A432D /* ViewController.swift */,
-				311BFC602AA0B9BA0007D279 /* SecondViewController.swift */,
-				3137E9B62AAE21D4004166C1 /* UIColorExtension.swift */,
 				3195A4202A9DF9B1003A432D /* Main.storyboard */,
 				3195A4232A9DF9B2003A432D /* Assets.xcassets */,
 				3195A4252A9DF9B2003A432D /* LaunchScreen.storyboard */,
@@ -91,6 +91,17 @@
 				31B6A2D52AB0871300C5AC7A /* ColorGame.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		31E626672AB1B64200CC0434 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3137E9B42AACB36E004166C1 /* VeryFirstViewController.swift */,
+				31E626652AB1A98000CC0434 /* CommonViewController.swift */,
+				3195A41E2A9DF9B1003A432D /* ViewController.swift */,
+				311BFC602AA0B9BA0007D279 /* SecondViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 				3195A41F2A9DF9B1003A432D /* ViewController.swift in Sources */,
 				31B6A2D62AB0871300C5AC7A /* ColorGame.swift in Sources */,
 				3137E9B52AACB36E004166C1 /* VeryFirstViewController.swift in Sources */,
+				31E626662AB1A98000CC0434 /* CommonViewController.swift in Sources */,
 				3195A41B2A9DF9B1003A432D /* AppDelegate.swift in Sources */,
 				3195A41D2A9DF9B1003A432D /* SceneDelegate.swift in Sources */,
 			);

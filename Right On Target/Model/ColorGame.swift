@@ -5,8 +5,7 @@
 //  Created by Amor on 12.09.2023.
 //
 
-import Foundation
-
+import UIKit
 class ColorGame: GameProtocol {
     
     typealias Round = ColorGameRound
@@ -45,7 +44,8 @@ class ColorGame: GameProtocol {
     }
     
     func startNewRound() {
-        let newSecretValue: String = getNewSecretValue()
+        typealias ValueType = String
+        let newSecretValue: ValueType = getNewSecretValue()
         currentRound = ColorGameRound(secretValue: (newSecretValue))
         rounds.append(currentRound)
     }
@@ -58,20 +58,22 @@ class ColorGame: GameProtocol {
 }
 
 class ColorGameRound: GameRoundProtocol {
-    func calculateScore(with value: String) {
-        if value == currentSecretValue {
-            score = 5
-        } else {
-            score = 0
-        }
-    }
     
     typealias ValueType = String
     var score: Int = 0
-    var currentSecretValue: String = ""
-    
+    var currentSecretValue: ValueType
     init(secretValue: ValueType) {
         currentSecretValue = secretValue
+    }
+    
+    func calculateScore(with value: ValueType) {
+        var newValue = UIColor(hex: currentSecretValue)
+        var newValueAsString = "\(newValue)"
+        if value == newValueAsString {
+            score = 5
+        } else {
+            score = 1
+        }
     }
 }
 
@@ -79,11 +81,7 @@ class ColorGenerator: GeneratorProtocol {
     typealias ValueType = String
     
     func getRandomValue() -> ValueType {
-//        if let _ = T.self as? String.Type {
             let a = ["1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"]
             return "#".appending(a[Int.random(in:0..<15)]).appending(a[Int.random(in:0..<15)]).appending(a[Int.random(in:0..<15)].appending(a[Int.random(in:0..<15)]).appending(a[Int.random(in:0..<15)]).appending(a[Int.random(in:0..<15)]))
-//        } else {
-//            return nil
-//        }
     }
 }

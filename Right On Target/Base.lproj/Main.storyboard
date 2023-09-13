@@ -245,33 +245,45 @@
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4e-1h-9cq">
                                 <rect key="frame" x="188" y="158" width="103" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray">
+                                <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Вариант 1"/>
                                     </attributedString>
                                     <color key="baseForegroundColor" red="0.29455377510000003" green="0.18576087359999999" blue="0.1059614829" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkColor:" destination="zEH-FI-0nQ" eventType="touchUpInside" id="QOM-aI-GpZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqQ-M6-ywI">
                                 <rect key="frame" x="299" y="158" width="106" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Вариант 2">
+                                <buttonConfiguration key="configuration" style="plain" title="Вариант 2">
                                     <color key="baseForegroundColor" red="0.30980393290000002" green="0.19607841970000001" blue="0.109803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkColor:" destination="zEH-FI-0nQ" eventType="touchUpInside" id="MP1-uv-Xth"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZk-I3-u3D">
                                 <rect key="frame" x="433" y="158" width="105.66666666666663" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Вариант 3">
+                                <buttonConfiguration key="configuration" style="plain" title="Вариант 3">
                                     <color key="baseForegroundColor" red="0.30980393290000002" green="0.19607841970000001" blue="0.109803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkColor:" destination="zEH-FI-0nQ" eventType="touchUpInside" id="qAR-qu-q7S"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfJ-GI-Cjw">
                                 <rect key="frame" x="546" y="158" width="106" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Вариант 4">
+                                <buttonConfiguration key="configuration" style="plain" title="Вариант 4">
                                     <color key="baseForegroundColor" red="0.30980393290000002" green="0.19607841970000001" blue="0.109803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkColor:" destination="zEH-FI-0nQ" eventType="touchUpInside" id="dXm-M1-ag5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCe-PS-uKM">
                                 <rect key="frame" x="717" y="340" width="81" height="40"/>

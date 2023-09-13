@@ -91,10 +91,6 @@ class NumberGenerator: GeneratorProtocol {
         endRangeValue = endValue
     }
     func getRandomValue() -> ValueType {
-//        if let _ = T.self as? any Numeric.Type {
             return (startRangeValue...endRangeValue).randomElement()!
-//        }  else {
-//            return nil
-//        }
     }
 }

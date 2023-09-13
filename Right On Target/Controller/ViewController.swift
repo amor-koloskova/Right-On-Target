@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: CommonViewController {
     
     // Сущность "игра"
     var game: NumberGame!
@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet var label: UILabel!
     
     // MARK: - Жизненный цикл
- 
+    
     override func loadView() {
         super.loadView()
         
@@ -32,20 +32,20 @@ class ViewController: UIViewController {
         let generator = NumberGenerator(startValue: 1, endValue: 50)
         game = NumberGame(valueGenerator: generator!, rounds: 5)
         
-        updateLabelWithSecretNumber(newText: String(game.currentRound.currentSecretValue))
+        updateLabelWithNewText(labelText: &(label.text)!, newText: String(game.currentRound.currentSecretValue))
         
         slider.minimumValue = 0.0
         slider.maximumValue = 50.0
     }
     
-    @IBAction func hideCurrentScene() {
-        self.dismiss(animated: true, completion: nil)
+    override func hideCurrentScene() {
+        super.hideCurrentScene()
     }
     
     @IBAction func changeColor(_ sender: Any) {
         let sliderValue = CGFloat(self.slider.value)
         view.backgroundColor = UIColor(red: sliderValue/32, green: sliderValue/25, blue: sliderValue/28, alpha: 1)
-   }
+    }
     
     @IBAction func checkNumber() {
         let sliderValue = Int(self.slider.value)
@@ -56,22 +56,14 @@ class ViewController: UIViewController {
         } else {
             game.startNewRound()
         }
-        updateLabelWithSecretNumber(newText: String(game.currentRound.currentSecretValue))
+        updateLabelWithNewText(labelText: &(label.text)!, newText: String(game.currentRound.currentSecretValue))
     }
-    // MARK: - Обновление View
-    // Обновление текста загаданного числа
-     private func updateLabelWithSecretNumber(newText: String) {
-        label.text = newText
-         
-     }
-        // Отображение всплывающего окна со счетом
-        private func showAlertWith(score: Int) {
-        let alert = UIAlertController(
-        title: "Игра окончена",
-        message: "Вы заработали \(score) очков",
-        preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Начать заново", style:
-        .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-        }
+    
+    override func showAlertWith(score: Int) {
+        super.showAlertWith(score: score)
+    }
+    
+    override func updateLabelWithNewText(labelText: inout String, newText: String) {
+        super.updateLabelWithNewText(labelText: &labelText, newText: newText)
+    }
 }
