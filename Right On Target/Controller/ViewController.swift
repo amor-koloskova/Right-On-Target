@@ -12,7 +12,12 @@ class ViewController: CommonViewController {
             slider.value = 25.0
         }
     }
-    @IBOutlet var label: UILabel!
+    
+    @IBOutlet var label: UILabel! {
+        didSet {
+            label.textColor = .black
+        }
+    }
     
     // MARK: - Жизненный цикл
     
